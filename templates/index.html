@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Men and Women Classification System</title>
+</head>
+<body>
+    <h1 style="text-align:center; font-size: 40px;">Welcome to Men and Women Classification System</h1>
+    <br>
+    <form action = '/predict' method="post" enctype="multipart/form-data">
+        <h3>Upload the image</h3>
+        <br>
+        <br>
+        <input type="file" name="myfile", style="font-size: 20px; color: black;">
+        <br>
+        <br>
+        <input type = 'submit' value = 'Predict', style = "font-size: 20px; color: blue;">
+    </form>
+    <br>
+    <br>
+    {{ "%20s:%s"|format(key, value) }}
+    {% if label %}
+  
+        <img src = "{{ img_path }}">
+        <h2>This is {{ label }}</h2>
+    {% endif %}
+</body>
+</html>
